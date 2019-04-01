@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Trianon
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-input [(ngModel)]='value' clearInput></ion-input>
+  </ion-item>
+
+
+  <ion-button expand="full" (click)='openModal()'> Open the modal vai</ion-button>
+  <ion-button expand="full" (click)='pushPage()'> Open de push now </ion-button>
+  <ion-button expand="full" [routerLink]="['/cardapio', value]" routerDirection="forward"> Roter de push now </ion-button>
+
+
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add" (click)='openModal()'></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>
