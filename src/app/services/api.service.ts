@@ -24,8 +24,8 @@ export class ApiService {
     return this._http.get('http://192.168.1.179:1337/subgrupo')
   }
 
-  public getSubGrupo(): Observable<any> {
-    return this._http.get(`http://192.168.1.179:1337/grupoW/27`)
+  public getSubGrupo(cd_grupo: number): Observable<any> {
+    return this._http.get(`http://192.168.1.179:1337/grupoW/28`)
   }
 
   public getProduto(): Observable<any> {

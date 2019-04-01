@@ -1,0 +1,33 @@
+
+  ion-card{
+    display: flex;
+    flex-direction: column;
+    // width: 20% !important;
+    // height: 20% !important;
+    // margin: 2% !important;
+    @media (max-width: 399px) {
+      width: 45% !important;
+      height: 50% !important;
+      margin: 2% !important;
+    }
+    @media (min-width: 400px) and (max-width: 699px) {
+      width: 30% !important;
+      height: 50% !important;
+      margin: 1.5% !important;
+    }
+    @media (min-width: 700px) and (max-width: 991.98px) { 
+      width: 22% !important;
+      height: 50% !important;
+      margin: 1.5% !important;
+    }
+  }
+
+  img{
+    width: 100vw;
+    height: 10vh;
+  }
+
+  ion-card-title {
+    text-align: center;
+    font-size: 80%;
+  }

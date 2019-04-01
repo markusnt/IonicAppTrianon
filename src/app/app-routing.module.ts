@@ -5,6 +5,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'cardapio/:myid', loadChildren: './pages/cardapio/cardapio.module#CardapioPageModule' },
+  { path: 'cardapio-subgrupo/:myid', loadChildren: './pages/cardapio-subgrupo/cardapio-subgrupo.module#CardapioSubgrupoPageModule' },
+  { path: 'cardapio-produto', loadChildren: './pages/cardapio-produto/cardapio-produto.module#CardapioProdutoPageModule' },
 ];
 
 @NgModule({

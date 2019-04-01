@@ -1,7 +1,5 @@
 {
-  "name": "Trianon",
-  "integrations": {
-    "cordova": {}
-  },
+  "name": "Trianonot",
+  "integrations": {},
   "type": "angular"
 }

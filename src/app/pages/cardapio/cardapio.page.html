@@ -3,12 +3,30 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Cardapio</ion-title>
+    <ion-title>Pedido Mesa {{ passedId }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  My Id is: {{ passedId }}
+  <ion-grid>
+    <ion-row>
+      <ion-card *ngFor="let grupo of grupos" (click)='pushPage(grupo)'>
+        <ion-card-header>
+          <ion-card-title> {{ grupo.ds_grupo }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img>
+        </ion-card-content>
+      </ion-card>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>

@@ -1,11 +1,17 @@
 <ion-content>
+    <ion-item>
+        <ion-label position="floating">Floating Label</ion-label>
+      <ion-input [(ngModel)]='value' clearInput type="number"></ion-input>
+    </ion-item>
   My Id is: {{ passedId }}
 </ion-content>
 
+
+
 <ion-footer>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="success">
     <ion-button expand='full' fill='clear' color='light' (click)='closeModal()'>
-      Close
+      Abrir Mesa
     </ion-button>
   </ion-toolbar>
 </ion-footer>
