@@ -18,16 +18,6 @@ export class CardapioPage implements OnInit {
   constructor(private activateRoute: ActivatedRoute,
     private navCtrl: NavController,
     private _api: ApiService) {
-
-    this._api.getAllGrupos()
-      .subscribe(
-        (grupos) => {
-          this.grupos = grupos;
-        }
-      );
-
-
-
   }
 
   pushPage(grupos: Grupo){
@@ -37,7 +27,12 @@ export class CardapioPage implements OnInit {
 
   ngOnInit() {
     
-    this.passedId = this.activateRoute.snapshot.paramMap.get('myid')
-  }
+    this._api.getAllGrupos()
+      .subscribe(
+        (grupos) => {
+          this.grupos = grupos;
+        }
+      );
+    }
 
 }

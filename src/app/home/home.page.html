@@ -8,15 +8,26 @@
 
 <ion-content>
 
-  <ion-item>
+  <!-- <ion-item>
     <ion-input [(ngModel)]='value' clearInput></ion-input>
-  </ion-item>
+  </ion-item> -->
 
 
-  <ion-button expand="full" (click)='openModal()'> Open the modal vai</ion-button>
-  <ion-button expand="full" (click)='pushPage()'> Open de push now </ion-button>
-  <ion-button expand="full" [routerLink]="['/cardapio', value]" routerDirection="forward"> Roter de push now </ion-button>
+  <!-- <ion-button expand="full" (click)='openModal()'> Open the modal vai</ion-button> -->
+  <!-- <ion-button expand="full" (click)='pushPage()'> Open de push now </ion-button> -->
+  <!-- <ion-button expand="full" [routerLink]="['/cardapio', value]" routerDirection="forward"> Roter de push now </ion-button> -->
 
+  <ion-grid>
+    <ion-row>
+      <ion-card *ngFor="let grupo of grupos" (click)='pushPage()'>
+        <ion-card-content>
+          {{ grupo.cd_grupo }}
+        </ion-card-content>
+      </ion-card>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">

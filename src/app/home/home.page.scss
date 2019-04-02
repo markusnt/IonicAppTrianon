@@ -1,1 +1,24 @@
 
+
+  ion-card{
+    display: flex;
+    flex-direction: row;
+    // width: 20% !important;
+    // height: 20% !important;
+    // margin: 2% !important;
+    @media (max-width: 399px) {
+      width: 15% !important;
+      height: 50% !important;
+      margin: 2% !important;
+    }
+    @media (min-width: 400px) and (max-width: 699px) {
+      width: 15vw !important;
+      height: 9vh !important;
+      margin: 2.3% !important;
+    }
+    @media (min-width: 700px) and (max-width: 991.98px) { 
+      width: 22% !important;
+      height: 50% !important;
+      margin: 1.5% !important;
+    }
+  }

@@ -15,25 +15,28 @@ export class CardapioSubgrupoPage implements OnInit {
   passedId = null;
   public subgrupos: SubGrupo[]
   public grupo: Grupo[]
-  cd_grupo: number;
+  cd_grupo =  null;
   
 
 
   constructor(public navCtrl: NavController,
     private activateRoute: ActivatedRoute,
     private _api: ApiService) {
-
-    this._api.getSubGrupo(this.cd_grupo)
-      .subscribe(
-        (subgrupos) => {
-          this.subgrupos = subgrupos;
-        }
-      )
       }
 
 
   ngOnInit() {
-    this.passedId = this.activateRoute.snapshot.paramMap.get('myid')
+    
+
+    this.cd_grupo = this.activateRoute.snapshot.paramMap.get('cd_grupo')
+
+    this._api.buscarSubGrupo(this.cd_grupo)
+      .subscribe(
+        (subgrupos) => {
+          console.log(this.cd_grupo)
+          this.subgrupos = subgrupos;
+        }
+      )
 
   }
 

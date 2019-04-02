@@ -9,11 +9,25 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+
+  url = 'http://192.168.1.179:1337/'
   data:any
   // public grupo = new BehaviorSubject(Grupo)
 
   constructor(private _http: HttpClient) { 
 
+  }
+
+  buscarGrupos(): Observable<any> {
+    return this._http.get(`${this.url}grupo`)
+  }
+
+  buscarSubGrupo(cd_grupo): Observable<any> {
+    return this._http.get(`${this.url}grupoW/${cd_grupo}`)
+  }
+
+  buscarProduto(cd_subgrupo): Observable<any> {
+    return this._http.get(`${this.url}subgrupoW/${cd_subgrupo}`)
   }
 
   public getAllGrupos(): Observable<any> {
@@ -31,15 +45,6 @@ export class ApiService {
   public getProduto(): Observable<any> {
     return this._http.get(`http://192.168.1.179:1337/subgrupoW/119`)
   }
-
-  // public listaGrupoWsub(cd_grupo: number) {
-  //   if(this.data) {
-  //     return Promise.resolve(this.data)
-  //   }
-
-  // return new Promise(resolve => {
-  //   this._http.get('http://192.168.1.179:1337/grupoW/${cd_grupo}').toPromise().then
-  // })
 
   }
 

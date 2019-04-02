@@ -10,7 +10,7 @@
 
     <ion-grid>
   <ion-row>
-    <ion-card *ngFor="let subgrupo of subgrupos">
+    <ion-card *ngFor="let subgrupo of subgrupos" [routerLink]="['/', 'cardapio-produto', subgrupo.cd_subgrupo]">
       <ion-card-header>
         <ion-card-title> {{ subgrupo.ds_subgrupo }}</ion-card-title>
       </ion-card-header>
@@ -24,8 +24,12 @@
 </ion-grid>
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
-      <ion-icon name="cart"></ion-icon>
+      <ion-icon name="arrow-dropup"></ion-icon>
     </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-icon name="cart"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="list-box"></ion-icon></ion-fab-button>
+    </ion-fab-list>
   </ion-fab>
 
 </ion-content>
