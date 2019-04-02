@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'cardapio', loadChildren: './pages/cardapio/cardapio.module#CardapioPageModule' },
   { path: 'cardapio-subgrupo/:cd_grupo', loadChildren: './pages/cardapio-subgrupo/cardapio-subgrupo.module#CardapioSubgrupoPageModule' },
   { path: 'cardapio-produto/:cd_subgrupo', loadChildren: './pages/cardapio-produto/cardapio-produto.module#CardapioProdutoPageModule' },
+  { path: 'pedido', loadChildren: './pages/pedido/pedido.module#PedidoPageModule' },
 ];
 
 @NgModule({
