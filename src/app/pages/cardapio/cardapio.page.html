@@ -15,21 +15,23 @@
         <ion-card-header>
           <ion-card-title> {{ grupo.ds_grupo }}</ion-card-title>
         </ion-card-header>
-      
-        <img src="https://picsum.photos/500/300?image=493">
       </ion-card>
       <ion-col>
       </ion-col>
     </ion-row>
   </ion-grid>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon name="arrow-dropup"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
       <ion-fab-button>
-        <ion-icon name="arrow-dropup"></ion-icon>
+        <ion-icon name="cart"></ion-icon>
       </ion-fab-button>
-      <ion-fab-list side="top">
-        <ion-fab-button><ion-icon name="cart"></ion-icon></ion-fab-button>
-        <ion-fab-button><ion-icon name="list-box"></ion-icon></ion-fab-button>
-      </ion-fab-list>
-    </ion-fab>
+      <ion-fab-button>
+        <ion-icon name="list-box"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>

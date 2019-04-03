@@ -11,28 +11,36 @@
   <ion-grid>
 <ion-row>
   <ion-card *ngFor="let produto of produtos" >
-    <ion-card-header color="medium">
-      <ion-card-subtitle>{{ produto.ds_produto }}</ion-card-subtitle>
+    <ion-card-header >
+      <ion-card-title>{{ produto.ds_produto }}</ion-card-title>
+      <ion-card-subtitle>{{ produto.pr_produto | currency:'BRL':'symbol' }}</ion-card-subtitle>
     </ion-card-header>
-    <ion-card-content>
-      <ion-card-title class="add">
-        <ion-icon name="remove-circle-outline"></ion-icon> 
-        <span>{{ produto.cd_produto }}</span>
-        <ion-icon name="add-circle-outline"></ion-icon>
-      </ion-card-title>
-
-    </ion-card-content>
+    <ion-footer>
+      <ion-toolbar color="primary">
+        <ion-button expand='full' fill='clear' color='light' (click)='addToPedido()'>
+          Adicionar
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
   </ion-card>
   <ion-col>
   </ion-col>
 </ion-row>
 </ion-grid>
+
+
+
+
+
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button color="dark">
       <ion-icon name="arrow-dropup"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button><ion-icon name="cart"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="openPedido()" >
+        <ion-badge *ngIf="pedido.length > 0">{{ pedido.length }}</ion-badge>
+        <ion-icon name="cart"></ion-icon>
+      </ion-fab-button>
       <ion-fab-button><ion-icon name="list-box"></ion-icon></ion-fab-button>
     </ion-fab-list>
   </ion-fab>
