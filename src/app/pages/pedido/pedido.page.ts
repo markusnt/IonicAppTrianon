@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PedidoService } from 'src/app/services/pedido.service';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pedido',
@@ -13,24 +14,24 @@ export class PedidoPage implements OnInit {
  
   total = 0;
 
-  constructor(private _pedido: PedidoService ) { }
+  constructor(private _pedido: PedidoService, private modalCtrl: ModalController ) { }
 
   
 
   ngOnInit() {
 
-    let pedidos = this._pedido.getPedido();
-    let selected = {};
-    for (let obj of pedidos) {
-      if (selected[obj.id]) {
-        selected[obj.id].count++;
+    let items = this._pedido.getPedido();
+    let selected = {}
+    for (let obj of items){
+      if(selected[obj.cd_produto]) {
+        selected[obj.cd_produto].count++
       } else {
-        selected[obj.id] = {...obj, count: 1};
+        selected[obj.cd_produto] = {...obj, count: 1}
       }
     }
-    this.selectedItems = Object.keys(selected).map(key => selected[key])
-    this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.price), 0);
 
+    this.selectedItems = Object.keys(selected).map(key => selected[key])
+    // this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.pr_produto))
   }
 
 }

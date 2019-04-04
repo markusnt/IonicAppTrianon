@@ -41,9 +41,14 @@ export class CardapioProdutoPage implements OnInit {
     this.pedido = this._pedido.getPedido()
   }
 
-  addToPedido(produtos) {
-    this._pedido.addProduct(this.produtos);
+  addToPedido(produto) {
+    this._pedido.addProduct(produto);
     console.log(this.pedido)
+  }
+
+  removeToPedido(produto) {
+    this._pedido.removeProduct(produto);
+    console.log(produto)
   }
 
   openPedido() {

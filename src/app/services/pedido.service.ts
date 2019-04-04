@@ -17,9 +17,18 @@ export class PedidoService {
   getPedido() {
     return this.pedidos;
   }
+
+  getProduto() {
+    return this.produtos
+  }
  
   addProduct(produto) {
     this.pedidos.push(produto);
+  }
+
+  removeProduct(produto) {
+    // this.pedidos.reduce(produto);
+    this.pedidos.splice(produto)
   }
 
 }
