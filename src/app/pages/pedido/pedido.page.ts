@@ -31,7 +31,7 @@ export class PedidoPage implements OnInit {
     }
 
     this.selectedItems = Object.keys(selected).map(key => selected[key])
-    // this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.pr_produto))
+    this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.pr_produto), 0)
   }
 
 }

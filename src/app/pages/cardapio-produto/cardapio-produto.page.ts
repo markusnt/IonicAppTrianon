@@ -16,6 +16,7 @@ export class CardapioProdutoPage implements OnInit {
   cd_subgrupo = null;
   pedido = []
   items = []
+  count = 0
 
   constructor(public navCtrl: NavController,
     private activateRoute: ActivatedRoute,
@@ -42,6 +43,7 @@ export class CardapioProdutoPage implements OnInit {
   }
 
   addToPedido(produto) {
+    produto.count = produto.count +1
     this._pedido.addProduct(produto);
     console.log(this.pedido)
   }

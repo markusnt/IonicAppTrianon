@@ -11,10 +11,9 @@
     <ion-grid>
   <ion-row>
     <ion-card *ngFor="let subgrupo of subgrupos" [routerLink]="['/', 'cardapio-produto', subgrupo.cd_subgrupo]">
-      <ion-card-header color="light">
-        <ion-card-title> {{ subgrupo.ds_subgrupo }}</ion-card-title>
-      </ion-card-header>
-      <img src="https://picsum.photos/500/300/?random">
+      <ion-card-content>
+         {{ subgrupo.ds_subgrupo }}
+      </ion-card-content>
     </ion-card>
     <ion-col>
     </ion-col>

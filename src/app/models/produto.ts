@@ -3,4 +3,5 @@ export interface Produto {
     ds_produto: String
     pr_produto: Number
     cd_subgrupo: Number
+    count: 2
 }

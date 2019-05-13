@@ -3,6 +3,7 @@ import { NavController, ModalController } from '@ionic/angular';
 import { ApiService } from '../services/api.service';
 import { ModalPage } from '../pages/modal/modal.page';
 import { Grupo } from '../models/grupo';
+import { Mesa } from '../models/mesa';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +12,19 @@ import { Grupo } from '../models/grupo';
 })
 export class HomePage {
   value = 0;
-public grupos: Grupo[]
+  public grupos: Grupo[]
+  public mesas: Mesa[]
   constructor(public navCtrl: NavController,
     private _api: ApiService,
     private modalCtrl: ModalController
-  ) {    this._api.getAllGrupos()
+  ) {
+    this._api.getAllMesa()
     .subscribe(
-      (grupos) => {
-        this.grupos = grupos;
+      (mesas) => {
+        this.mesas = mesas;
       }
-    ); }
+    );
+  }
 
   pushPage() {
     this.navCtrl.navigateForward(`/cardapio`)

@@ -22,16 +22,24 @@ export class ApiService {
     return this._http.get(`${this.url}grupo`)
   }
 
+  buscarMesa(): Observable<any> {
+    return this._http.get(`${this.url}mesa`)
+  }
+
   buscarSubGrupo(cd_grupo): Observable<any> {
-    return this._http.get(`${this.url}grupoW/${cd_grupo}`)
+    return this._http.get(`${this.url}subgrupoS/${cd_grupo}`)
   }
 
   buscarProduto(cd_subgrupo): Observable<any> {
-    return this._http.get(`${this.url}subgrupoW/${cd_subgrupo}`)
+    return this._http.get(`${this.url}produtoS/${cd_subgrupo}`)
   }
 
   public getAllGrupos(): Observable<any> {
     return this._http.get('http://192.168.1.179:1337/grupo')
+  }
+
+  public getAllMesa(): Observable<any> {
+    return this._http.get('http://192.168.1.179:1337/mesa')
   }
 
   public getAllSubGrupos(): Observable<any> {
@@ -39,11 +47,11 @@ export class ApiService {
   }
 
   public getSubGrupo(cd_grupo: number): Observable<any> {
-    return this._http.get(`http://192.168.1.179:1337/grupoW/28`)
+    return this._http.get(`http://192.168.1.179:1337/subgrupoS/28`)
   }
 
   public getProduto(): Observable<any> {
-    return this._http.get(`http://192.168.1.179:1337/subgrupoW/119`)
+    return this._http.get(`http://192.168.1.179:1337/produtoS/119`)
   }
 
   }

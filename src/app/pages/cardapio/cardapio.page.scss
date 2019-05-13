@@ -7,13 +7,13 @@
     // margin: 2% !important;
     @media (max-width: 450px) {
       width: 44vw !important;
-      height: auto !important;
-      margin: 2.2% !important;
+      height: 10vh !important;
+      margin: 1vw !important;
     }
     @media (min-width: 451px) and (max-width: 699px) {
-      width: 29.5vw !important;
-      height: auto !important;
-      margin: 1.5% !important;
+      width: 29vw !important;
+      height: 20vh !important;
+      margin: 1vw !important;
     }
     @media (min-width: 700px) and (max-width: 991.98px) { 
       width: 22% !important;
@@ -27,9 +27,9 @@
     height: 10vh;
   }
 
-  ion-card-title {
+  ion-card-content {
     text-align: center;
-    font-size: 100%;
+    font-size: 120%;
   }
 
   ion-content {
