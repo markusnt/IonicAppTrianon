@@ -1,5 +1,7 @@
 {
-  "name": "Trianonot",
-  "integrations": {},
+  "name": "Ionic4x_Trianon",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

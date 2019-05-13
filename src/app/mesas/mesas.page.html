@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mesas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-button expand="full" (click)='openModal()'> Open the modal vai</ion-button> -->
+  <!-- <ion-button expand="full" (click)='pushPage()'> Open de push now </ion-button> -->
+  <!-- <ion-button expand="full" [routerLink]="['/cardapio', value]" routerDirection="forward"> Roter de push now </ion-button> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-card *ngFor="let mesa of mesas" (click)='pushPage()'>
+        <ion-card-content>
+          {{ mesa.cd_mesa }}
+        </ion-card-content>
+      </ion-card>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

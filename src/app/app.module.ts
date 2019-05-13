@@ -8,18 +8,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
-import { ModalPageModule } from './pages/modal/modal.module';
-import { CardapioPageModule } from './pages/cardapio/cardapio.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [
-    HttpClientModule,
-    BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    ModalPageModule,
-    CardapioPageModule,],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,

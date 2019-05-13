@@ -1,38 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Trianon
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding class="background">
 
-<ion-content>
+    <img class="logo" src="../../assets/img/logo.jpg" />
 
-  <!-- <ion-item>
-    <ion-input [(ngModel)]='value' clearInput></ion-input>
-  </ion-item> -->
+  <ion-item>
+    <ion-label position="floating">...Usuario</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label position="floating">...Senha</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
 
-  <!-- <ion-button expand="full" (click)='openModal()'> Open the modal vai</ion-button> -->
-  <!-- <ion-button expand="full" (click)='pushPage()'> Open de push now </ion-button> -->
-  <!-- <ion-button expand="full" [routerLink]="['/cardapio', value]" routerDirection="forward"> Roter de push now </ion-button> -->
+  <ion-button shape="round" (click)='pushPage()'>Login</ion-button>
 
-  <ion-grid>
-    <ion-row>
-      <ion-card *ngFor="let grupo of grupos" (click)='pushPage()'>
-        <ion-card-content>
-          {{ grupo.cd_grupo }}
-        </ion-card-content>
-      </ion-card>
-      <ion-col>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-
-<ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button color="dark">
-    <ion-icon name="add" (click)='openModal()'></ion-icon>
-  </ion-fab-button>
-</ion-fab>
+  
 </ion-content>
